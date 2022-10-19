@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'roboto', 'monospace' sans-serif;
+}
+/*#############Navigation###########*/
+nav{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    flex: 0 0 auto;
+}
+nav ul {
+    list-style-type: none;
+    display: none;
+
+}
+nav ul a {
+    display: block;
+    background: #0d1317;
+    padding: 20px;
+    font-size: 17px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ad343e;
+    transition: color 2s ease, background 2s ease, padding 2s ease;
+}
+nav ul a:hover{
+    background: #474747;
+    color: #e0e0ce;
+    padding-left: 30px;
+}
+.nav-container img{
+    width: 60px;
+    align-self: center;
+}
+.nav-container{
+    padding: 0 20px;
+    background: #474747;
+    border-bottom: 2px solid #ad343e;
+    display: flex;
+    justify-content: space-between;
+}
+.bar{
+    width: 30px;
+    height: 3px;
+    margin: 7px;
+    background: #ad343e;
+}
+.btn{
+    padding: 2px;
+    display: inline-block;
+    border: 2px solid #ad343e;
+    align-self: center;
+    cursor: pointer;
+}
+#menu-toggle{
+    display: none;
+}
+#menu-toggle:checked > #menu ul {
+    display: block!important;
+    position: absolute;
+}
+.active{
+    color: #0d1317;
+    background: #ad343e;
+    border-radius: 20px;
+}
+.active:hover{
+    color: #0d1317;
+    background: #ad343e;
+}
+@media screen and (min-width:776px){
+    .nav-container{
+        display: none;
+    }
+    nav ul{
+        display: flex!important;
+        flex-wrap: wrap;
+        justify-content: center;
+        background: rgb(13, 19, 23, 0.8);
+    }
+    nav ul a{
+        background: transparent;
+    }
+    nav ul a:hover{
+        background: transparent;
+        padding-left: 20px;
+    }
+}
+/*############Services#############*/
+.services{
+    min-height: 80vh;
+    background: url(img/Image17.jpg)center/cover fixed no-repeat;
+    display: flex;
+    align-items: center;
+}
+.service{
+    color: #ad343e;
+    display: flex;
+    margin: 40px;
+}
+.service-icon{
+    align-self: center;
+    font-size: 60px;
+    margin-right: 20px;
+    border-radius: 50%;
+    border: 2px solid #f5f3f5;
+    padding: 20px;
+    color: #ad343e;
+}
+.service-text h3{
+    text-transform: uppercase;
+    color: #f5f3f5;
+}
+.service-text p{
+    line-height: 2;
+    margin-top: 5px;
+}
+@media screen and (min-width:576px){
+    .services-center{
+        width: 70%;
+    }
+}
+ @media screen and (min-width:776px) {
+    .services-center{
+        width: 50%;
+    } 
+    .service-text p{
+        width: 70%;
+    }
+}

@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'roboto', 'monospace' sans-serif;
+}
+/*#############Navigation###########*/
+nav{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    flex: 0 0 auto;
+}
+nav ul {
+    list-style-type: none;
+    display: none;
+
+}
+nav ul a {
+    display: block;
+    background: #0d1317;
+    padding: 20px;
+    font-size: 17px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ad343e;
+    transition: color 2s ease, background 2s ease, padding 2s ease;
+}
+nav ul a:hover{
+    background: #474747;
+    color: #e0e0ce;
+    padding-left: 30px;
+}
+.nav-container img{
+    width: 60px;
+    align-self: center;
+}
+.nav-container{
+    padding: 0 20px;
+    background: #474747;
+    border-bottom: 2px solid #ad343e;
+    display: flex;
+    justify-content: space-between;
+}
+.bar{
+    width: 30px;
+    height: 3px;
+    margin: 7px;
+    background: #ad343e;
+}
+.btn{
+    padding: 2px;
+    display: inline-block;
+    border: 2px solid #ad343e;
+    align-self: center;
+    cursor: pointer;
+}
+#menu-toggle{
+    display: none;
+}
+#menu-toggle:checked > #menu ul {
+    display: block!important;
+    position: absolute;
+}
+.active{
+    color: #0d1317;
+    background: #ad343e;
+    border-radius: 20px;
+}
+.active:hover{
+    color: #0d1317;
+    background: #ad343e;
+}
+/*#############Header#############*/
+header{
+    min-height: 100vh;
+    background: linear-gradient(rgba(255,255,255,0.9),rgba(255,255,255,0.3)), url(img/Image14.jpg)center/cover fixed no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+.banner{
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.banner h1{
+    font-size: 50px;
+    text-transform: uppercase;
+    color: #ad343e;
+}
+.banner h3{
+    text-transform: capitalize;
+    font-size: 30px;
+    color: #0d1317;
+}
+.and{
+    color: #f5f3f5;
+}
+.banner-icon{
+    padding: 20px;
+}
+.banner-icon a{
+    display: inline-block;
+    font-size: 30px;
+    background: #474747;
+    padding: 5px 10px;
+    margin: 0 10px;
+    border-radius: 50%;
+    color: #f5f3f5;
+    transition: color 1s ease, transform 1s ease;
+}
+.banner-icon a:hover{
+    color: #ad343e;
+    transform: translateY(-10px);
+}
+@media screen and (min-width:776px){
+    .nav-container{
+        display: none;
+    }
+    nav ul{
+        display: flex!important;
+        flex-wrap: wrap;
+        justify-content: center;
+        background: rgb(13, 19, 23, 0.8);
+    }
+    nav ul a{
+        background: transparent;
+    }
+    nav ul a:hover{
+        background: transparent;
+        padding-left: 20px;
+    }
+}
